@@ -1,8 +1,8 @@
 let startBtn = document.getElementById('srt'); 
-let stopBtn = document.getElementById('stp'); 
+let pauseBtn = document.getElementById('pse'); 
 let resetBtn = document.getElementById('rst'); 
-let lapeBtn = document.getElementById('lsp'); 
-let lape=false;
+let lapBtn = document.getElementById('lap'); 
+let lap=false;
 let startFlag=false;
 
 let hour = 0; 
@@ -14,30 +14,31 @@ startBtn.addEventListener('click', function () {
 	if(!startFlag)
 	{
 		timer = true;
-		stopWatch();
+		pauseWatch();
 		startFlag=true;
 	}
 	 
 }); 
 
-stopBtn.addEventListener('click', function () { 
+pauseBtn.addEventListener('click', function () { 
 	timer = false; 
 	startFlag=false;
 }); 
 
-lapeBtn.addEventListener('click', function () { 
-	lape = true; 
+lapBtn.addEventListener('click', function () { 
+	lap = true; 
 }); 
+
 resetBtn.addEventListener('click', function () { 
 	timer = false; 
 	hour = 0; 
 	minute = 0; 
 	second = 0; 
 	count = 0; 
-	document.getElementById('hr').innerHTML = "00<span>hr</span>"; 
-	document.getElementById('min').innerHTML = "00<span>min</span>"; 
-	document.getElementById('sec').innerHTML = "00<span>sec</span>"; 
-	document.getElementById('cnt').innerHTML = "00<span>cnt</span>"; 
+	document.getElementById('hr').innerHTML = "00<span>Hr</span>"; 
+	document.getElementById('min').innerHTML = "00<span>Min</span>"; 
+	document.getElementById('sec').innerHTML = "00<span>Sec</span>"; 
+	document.getElementById('cnt').innerHTML = "00<span>Cnt</span>"; 
 
 	document.getElementById('hr_l').innerHTML = "00"; 
 	document.getElementById('min_l').innerHTML = "00"; 
@@ -46,7 +47,7 @@ resetBtn.addEventListener('click', function () {
 
 }); 
 
-function stopWatch() { 
+function pauseWatch() { 
 	if (timer) { 
 		count++; 
 
@@ -87,7 +88,7 @@ function stopWatch() {
 			countString = "0" + countString; 
 		} 
 
-        if(lape){
+        if(lap){
 			
         document.getElementById('hr_l').innerHTML = hrString; 
 		
@@ -97,12 +98,12 @@ function stopWatch() {
 		
 		document.getElementById('cnt_l').innerHTML = countString; 
 		
-		lape=false;
+		lap=false;
 	 }
-		document.getElementById('hr').innerHTML = hrString+"<span>hr</span>"; 
-		document.getElementById('min').innerHTML = minString+"<span>min</span>"; 
-		document.getElementById('sec').innerHTML = secString+"<span>sec</span>"; 
-		document.getElementById('cnt').innerHTML = countString+"<span>cnt</span>"; 
-		setTimeout(stopWatch, 10); 
+		document.getElementById('hr').innerHTML = hrString+"<span>Hr</span>"; 
+		document.getElementById('min').innerHTML = minString+"<span>Min</span>"; 
+		document.getElementById('sec').innerHTML = secString+"<span>Sec</span>"; 
+		document.getElementById('cnt').innerHTML = countString+"<span>Cnt</span>"; 
+		setTimeout(pauseWatch, 10); 
 	} 
 }
