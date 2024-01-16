@@ -1,0 +1,99 @@
+canvas {
+  position: absolute;
+  background: transparent;
+}
+
+.container {
+  background-color: snow;
+  width: 506px;
+  padding: 50px 0 50px;
+  margin: 20px 850px;
+  height: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border: 8px groove black;
+}
+
+body {
+  background: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+  color: rgb(104, 102, 102);
+  position: relative;
+  background: url("./tic1.jpg");
+  background-size: cover;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 30px;
+  font-style: oblique;
+  color: royalblue;
+}
+
+.board {
+  width: 306px;
+  height: 306px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98px;
+  height: 98px;
+  background-color: darkturquoise;
+  border-radius: 5%;
+  margin: 2px;
+  font-size: 80px;
+  color: white;
+  font-weight: 600;
+  font-family: cursive;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: #6f84a0;
+}
+
+.message {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: red;
+  font-size: larger;
+}
+
+#reset {
+  margin-top: 20px;
+  margin-left: 41%;
+  background-color: #0078d0;
+  color: #fff;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s;
+  border-radius: 30px;
+  border: none;
+}
+
+#reset:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
