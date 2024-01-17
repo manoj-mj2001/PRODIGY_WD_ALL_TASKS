@@ -1,8 +1,6 @@
-// window.addEventListener('load', (event) => {
-//   const entryAudio = new Audio("./entry.mp3");
-// entryAudio.play();
-// });
 const winAudio = new Audio("./Winning.mpeg");
+const turn1 = new Audio("./snd1.mpeg");
+const turn2 = new Audio("./snd2.mpeg");
 var turn = 1;
 var win = false;
 var boxClickArray = [];
@@ -34,7 +32,8 @@ function checkWin() {
       win = true;
       setTimeout(() => {
         document.querySelector(".pyro").style.display = "none";
-      }, 5000);
+        winAudio.pause();
+      }, 4000);
     }
   });
 }
@@ -61,11 +60,13 @@ function boxClick(num) {
         boxClickArray.push(num);
         const box = document.querySelector(".square:nth-child(" + num + ")");
         if (turn % 2 == 0) {
+          turn1.play();
           box.innerHTML = "O";
           box.style.color = "blue";
           document.getElementsByClassName("message")[0].innerHTML =
             "Player X's Turn..! ";
         } else {
+          turn2.play();
           box.style.color = "red";
           box.innerHTML = "X";
           document.getElementsByClassName("message")[0].innerHTML =

@@ -47,8 +47,7 @@ body {
   align-items: center;
   width: 98px;
   height: 98px;
-  background-color: darkturquoise;
-  border-radius: 5%;
+  background-color: rgba(106, 142, 35, 0.71);
   margin: 2px;
   font-size: 80px;
   color: white;
@@ -65,7 +64,7 @@ body {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: red;
-  font-size: larger;
+  font-size: x-large;
 }
 
 #reset {
@@ -90,10 +89,4 @@ body {
   box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
     rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
   transform: scale(1.05);
-}
-
-@media (min-width: 768px) {
-  .button-71 {
-    padding: 16px 48px;
-  }
 }
