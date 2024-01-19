@@ -3,21 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prodigy Infotech WD 04 - Weather App</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Prodigy Task 5 - Weather App</title>
   </head>
   <body>
-    <form onsubmit="event.preventDefault();" role="search">
-      <label for="search">Search for stuff</label>
+    <div class="container">
+      <h1>Weather App</h1>
       <input
-        id="search"
-        type="search"
-        placeholder="Enter City or Country..."
-        autofocus
+        type="text"
+        id="locationInput"
+        placeholder="Enter a City..."
+        spellcheck="true"
         required
       />
-      <button type="submit">Go</button>
-    </form>
+      <button id="searchButton">Search</button>
+      <div class="weather-info">
+        <h2 id="location"></h2>
+        <h3 id="temperature"></h3>
+        <p id="description"></p>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

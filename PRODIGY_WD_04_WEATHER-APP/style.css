@@ -1,111 +1,118 @@
-:root {
-  --rad: 0.7rem;
-  --dur: 0.3s;
-  --color-dark: rgb(127, 112, 115);
-  --color-light: #fff;
-  --color-brand: #579dbd;
-  --font-fam: "Lato", sans-serif;
-  --height: 5rem;
-  --btn-width: 6rem;
-  --bez: cubic-bezier(0, 0, 0.43, 1.49);
-}
-
 body {
-  background: var(--color-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-html {
-  box-sizing: border-box;
-  height: 100%;
-  font-size: 10px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-form {
-  position: relative;
-  width: 30rem;
-  background: var(--color-brand);
-  border-radius: var(--rad);
-  margin-top: -38%;
-}
-
-input,
-button {
-  height: var(--height);
-  font-family: var(--font-fam);
-  border: 0;
-  color: black;
-  font-size: 1.5rem;
-}
-
-input[type="search"] {
-  outline: 0;
+  background: url("cloud.jpg");
   width: 100%;
-  background: var(--color-light);
-  padding: 0 1.6rem;
-  border-radius: var(--rad);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  transition: all var(--dur) var(--bez);
-  transition-property: width, border-radius;
-  z-index: 1;
-  position: relative;
+  height: 100dvh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  display: flex;
+}
+
+.container {
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.312);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 15px solid snow;
+  border-radius: 30px;
+  margin: 5% auto;
+  box-shadow: 0 0 30px whitesmoke;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  text-decoration: dotted;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin: 5px -10px;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #d9e8d8;
+  font-size: 15px;
+  color: #0d0c22;
+  box-shadow: 0 0 5px #c1d9bf, 0 0 0 10px #f5f5f5eb;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #777;
 }
 
 button {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: var(--btn-width);
-  font-weight: bolder;
-  font-size: x-large;
-  background: var(--color-brand);
-  border-radius: 0 var(--rad) var(--rad) 0;
-  color: whitesmoke;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-size: 18px;
+  margin-top: 2.5rem;
+  background: rgb(241, 20, 20);
+  border: none;
+  text-align: center;
 }
 
-input:not(:-moz-placeholder-shown) {
-  border-radius: var(--rad) 0 0 var(--rad);
-  width: calc(100% - var(--btn-width));
+button:before {
+  height: 0%;
+  width: 2px;
 }
 
-input:not(:-ms-input-placeholder) {
-  border-radius: var(--rad) 0 0 var(--rad);
-  width: calc(100% - var(--btn-width));
+button:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
 
-input:not(:placeholder-shown) {
-  border-radius: var(--rad) 0 0 var(--rad);
-  width: calc(100% - var(--btn-width));
+button:hover {
+  transform: scale(1.1);
 }
-input:not(:-moz-placeholder-shown) + button {
-  display: block;
+.weather-info {
+  margin-top: 20px;
 }
-input:not(:-ms-input-placeholder) + button {
-  display: block;
+.weather-info h2 {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: darkviolet;
+  font-weight: 800px;
 }
-input:not(:placeholder-shown) + button {
-  display: block;
+.weather-info p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  margin-top: 2rem;
+  color: darkred;
+  font-size: large;
 }
-
-label {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+.weather-info h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  font-size: xx-large;
+  color: rgb(51, 0, 255);
 }
