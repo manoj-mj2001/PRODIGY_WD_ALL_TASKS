@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prodigy Infotech WD 05 - Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <input
+        type="text"
+        id="locationInput"
+        placeholder="Enter a City..."
+        spellcheck="true"
+        required
+      />
+      <button id="searchButton" onclick="fetchWeather">Search</button>
+      <div class="cardContainer">
+        <div class="card">
+          <p class="city" id="city"></p>
+          <p class="weather" id="weather"></p>
+          <p class="temp" id="temperature"></p>
+          <div class="minmaxContainer">
+            <div class="min">
+              <p class="minHeading">Min</p>
+              <p class="minTemp" id="mintemp1"></p>
+            </div>
+            <div class="max">
+              <p class="maxHeading">Max</p>
+              <p class="maxTemp" id="maxtemp1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

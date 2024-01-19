@@ -13,14 +13,18 @@ canvas {
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border: 8px groove black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 body {
   background: linear-gradient(to right, #7f53ac 0, #657ced 100%);
   color: rgb(104, 102, 102);
-  position: relative;
   background: url("./tic1.jpg");
   background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: sticky;
 }
 
 .header {
@@ -28,9 +32,10 @@ body {
   font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   font-style: oblique;
   color: royalblue;
+  margin-top: -40px;
 }
 
 .board {
@@ -47,17 +52,16 @@ body {
   align-items: center;
   width: 98px;
   height: 98px;
-  background-color: rgba(106, 142, 35, 0.71);
+  background-color: rgba(106, 142, 35, 0.753);
   margin: 2px;
   font-size: 80px;
-  color: white;
   font-weight: 600;
   font-family: cursive;
 }
 
 .square:hover {
   cursor: pointer;
-  background-color: #6f84a0;
+  background-color: #7e8da2;
 }
 
 .message {
@@ -65,11 +69,12 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: red;
   font-size: x-large;
+  font-weight: 500;
 }
 
 #reset {
   margin-top: 20px;
-  margin-left: 41%;
+  margin-left: 37%;
   background-color: #0078d0;
   color: #fff;
   cursor: pointer;
@@ -78,9 +83,8 @@ body {
   font-size: 20px;
   font-weight: 600;
   padding: 16px 21px;
-  position: relative;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.2s ease-in-out;
   border-radius: 30px;
   border: none;
 }
@@ -88,5 +92,5 @@ body {
 #reset:hover {
   box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
     rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }

@@ -1,6 +1,6 @@
-const winAudio = new Audio("./Winning.mpeg");
-const turn1 = new Audio("./snd1.mpeg");
-const turn2 = new Audio("./snd2.mpeg");
+const winAudio = new Audio("./winning-sound.mpeg");
+const turn1 = new Audio("./player-x-sound.mpeg");
+const turn2 = new Audio("./player-o-sound.mpeg");
 var turn = 1;
 var win = false;
 var boxClickArray = [];
@@ -77,6 +77,6 @@ function boxClick(num) {
       }
     }
   } else {
-    alert("do not click on same box!");
+    alert("Already checked that box..!");
   }
 }

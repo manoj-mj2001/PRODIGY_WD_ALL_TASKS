@@ -8,6 +8,95 @@ body {
   backdrop-filter: blur(10px);
   display: flex;
 }
+.cardContainer {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background-color: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  margin-left: 4.3rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px whitesmoke;
+}
+
+.city {
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 1.2px;
+  color: rebeccapurple;
+  margin-top: -0.5rem;
+}
+
+.weather {
+  font-weight: 700;
+  font-size: 1.3em;
+  letter-spacing: 1.2px;
+  color: darkred;
+  margin-top: -0.6rem;
+}
+
+.temp {
+  font-size: 1.4em;
+  color: blue;
+  margin-top: -0.5rem;
+  font-weight: 500;
+}
+
+.minmaxContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.min,
+.max {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0px 20px;
+  gap: -15px;
+  margin-top: -1rem;
+  height: 80%;
+}
+
+.max {
+  align-items: flex-start;
+  border-left: 1px solid black;
+}
+
+.maxHeading,
+.minHeading {
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+}
+
+.maxTemp,
+.minTemp {
+  font-size: 15px;
+  font-weight: 700;
+  color: rebeccapurple;
+  margin-top: -0.2rem;
+}
 
 .container {
   max-width: 400px;
