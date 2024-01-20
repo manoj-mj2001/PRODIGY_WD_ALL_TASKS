@@ -1,0 +1,100 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(70, 70, 244);
+}
+div {
+  display: block;
+}
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 60px;
+  color: rgb(251, 3, 3);
+  padding: 0px;
+  margin: 0px;
+  margin-left: 65px;
+}
+h2 {
+  font-family: "Bebas Neue";
+  font-size: 68px;
+  color: #320b87;
+}
+h3 {
+  font-family: sans-serif;
+  font-size: 58px;
+  color: #5e1ee9;
+}
+h4 {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 1000;
+  color: #5e1ee9;
+  font-weight: bolder;
+}
+h5 {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 1000;
+  color: #5e1ee9;
+}
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 300;
+}
+
+a:hover {
+  transition: 1s;
+  box-shadow: 10px 10px 20px black;
+}
+
+#header {
+  height: auto;
+  padding: 50px 0px 70px 0px;
+  background-color: snow;
+}
+#header span {
+  font-weight: 1000;
+}
+.custom-navbar {
+  background-color: whitesmoke;
+}
+.custom-ul {
+  text-align: center;
+  background-color: whitesmoke;
+}
+.custom-li {
+  font-weight: 700;
+  padding: 0px 25px;
+}
+.custom-logo {
+  width: 15%;
+}
+
+.custom-highlight {
+  color: black;
+}
+.custom-btn {
+  background-color: #3d4ff3;
+  padding: 10px;
+  border: none;
+}
+.custom-card {
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.custom-bg {
+  height: 350px;
+  background: #f1f1f1;
+  border-radius: 12px;
+}
+
+.custom-img-width {
+  width: 80px;
+}
+.custom-service-card {
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  border: none;
+}
