@@ -1,1 +1,1 @@
-I am learinng BootStrap. So I also used BootStrap in this Task. 
+I am learinng BootStrap. So I also used BootStrap to build this Landing Page.
