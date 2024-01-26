@@ -83,16 +83,22 @@ section .title::before {
   align-items: center;
   justify-content: space-between;
 }
-.navbar .logo a {
+
+.navbar .logo h1 {
   font-size: 35px;
   font-weight: 600;
-}
-.navbar .logo a span {
   color: gold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: all 0.3s ease;
 }
-.navbar.sticky .logo a span {
+.navbar .logo h6 {
+  font-size: 14px;
+  font-weight: 500;
+  color: whitesmoke;
+  font-family: cursive;
+  margin-left: 4px;
+}
+.navbar.sticky .logo h1 {
   color: #fff;
 }
 .navbar .menu li {
@@ -108,7 +114,7 @@ section .title::before {
   transition: 0.2s ease-in-out;
 }
 .navbar .menu li a:hover {
-  color: crimson;
+  color: yellow;
   transform: scale(1.3);
 }
 .navbar.sticky .menu li a:hover {
@@ -164,7 +170,6 @@ section .title::before {
     transform: rotate(0deg);
   }
 }
-
 /* menu btn styling */
 .menu-btn {
   color: #fff;
@@ -178,7 +183,7 @@ section .title::before {
   text-align: center;
   height: 45px;
   width: 45px;
-  border: 2.5px solid whitesmoke;
+  border: 2.4px solid whitesmoke;
   border-radius: 50px;
   line-height: 40px;
   transition: all 0.3s ease-in-out;
@@ -189,32 +194,15 @@ section .title::before {
   background-color: #3b5998;
 }
 .home-content .fa-instagram {
-  background: #f09433;
-  background: -moz-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: -webkit-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  background: radial-gradient(
+      circle farthest-corner at 28% 100%,
+      #fcdf8f 0%,
+      #fbd377 10%,
+      #fa8e37 22%,
+      #f73344 35%,
+      transparent 65%
+    ),
+    linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
 }
 
 .home-content .fa-github {
@@ -268,7 +256,7 @@ section .title::before {
 
 /* about section styling */
 .about {
-  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+  background-image: linear-gradient(360deg, #ff8473, #fff9d2);
 }
 .about .about-content .left {
   width: 45%;
@@ -281,6 +269,10 @@ section .title::before {
   border-radius: 40px;
   margin-top: 2.5rem;
   margin-left: 4rem;
+}
+.about .about-content .left img:hover {
+  transform: scale(1.3);
+  transition: 1s ease;
 }
 .about .about-content .right {
   width: 55%;
@@ -303,11 +295,7 @@ section .title::before {
 
 /* skills section styling */
 .skills {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(156, 252, 248, 1) 11.2%,
-    rgba(110, 123, 251, 1) 91.1%
-  );
+  background-image: linear-gradient(360deg, #103ce7, #64e9ff);
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
