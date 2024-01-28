@@ -295,7 +295,7 @@ section .title::before {
 
 /* skills section styling */
 .skills {
-  background-image: linear-gradient(360deg, #103ce7, #64e9ff);
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -307,22 +307,10 @@ section .title::before {
 }
 .skills .skills-content .left p {
   text-align: justify;
-}
-.skills .skills-content .left a {
-  display: inline-block;
-  background: crimson;
-  color: #fff;
-  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 500;
-  padding: 8px 16px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover {
-  color: crimson;
-  background: none;
+  font-size: large;
 }
 .skills .skills-content .right .bars {
   margin-bottom: 15px;
@@ -340,7 +328,7 @@ section .title::before {
 .skills .skills-content .right .line {
   height: 5px;
   width: 100%;
-  background: lightgrey;
+  background: ghostwhite;
   position: relative;
 }
 .skills .skills-content .right .line::before {
@@ -349,22 +337,25 @@ section .title::before {
   height: 100%;
   left: 0;
   top: 0;
-  background: crimson;
+  background: rgb(230, 7, 52);
 }
 .skills-content .right .html::before {
   width: 90%;
 }
 .skills-content .right .css::before {
-  width: 60%;
+  width: 85%;
 }
 .skills-content .right .js::before {
-  width: 80%;
+  width: 60%;
 }
 .skills-content .right .reactjs::before {
   width: 50%;
 }
 .skills-content .right .bootstrap::before {
   width: 70%;
+}
+.skills-content .right .tailwindcss::before {
+  width: 40%;
 }
 /* projects section styling */
 .projects {
@@ -521,131 +512,4 @@ footer span a {
 }
 footer span a:hover {
   text-decoration: underline;
-}
-
-/* responsive media query start */
-@media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
-  }
-}
-
-@media (max-width: 991px) {
-  .max-width {
-    padding: 0 50px;
-  }
-}
-@media (max-width: 947px) {
-  .menu-btn {
-    display: block;
-    z-index: 999;
-  }
-  .menu-btn i.active:before {
-    content: '\f00d';
-  }
-  .navbar .menu {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    left: -100%;
-    top: 0;
-    background: #111;
-    text-align: center;
-    padding-top: 80px;
-    transition: all 0.3s ease;
-  }
-  .navbar .menu.active {
-    left: 0;
-  }
-  .navbar .menu li {
-    display: block;
-  }
-  .navbar .menu li a {
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 25px;
-  }
-  .home .home-content .text-2 {
-    font-size: 70px;
-  }
-  .home .home-content .text-3 {
-    font-size: 35px;
-  }
-  .home .home-content a {
-    font-size: 23px;
-    padding: 10px 30px;
-  }
-  .max-width {
-    max-width: 930px;
-  }
-  .about .about-content .column {
-    width: 100%;
-  }
-  .about .about-content .left {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 60px;
-  }
-  .about .about-content .right {
-    flex: 100%;
-  }
-  .projects .serv-content .card {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-  }
-  .skills .skills-content .column,
-  .contact .contact-content .column {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-}
-
-@media (max-width: 690px) {
-  .max-width {
-    padding: 0 23px;
-  }
-  .home .home-content .text-2 {
-    font-size: 60px;
-  }
-  .home .home-content .text-3 {
-    font-size: 32px;
-  }
-  .home .home-content a {
-    font-size: 20px;
-  }
-  .projects .serv-content .card {
-    width: 100%;
-  }
-}
-
-@media (max-width: 500px) {
-  .home .home-content .text-2 {
-    font-size: 50px;
-  }
-  .home .home-content .text-3 {
-    font-size: 27px;
-  }
-  .about .about-content .right .text,
-  .skills .skills-content .left .text {
-    font-size: 19px;
-  }
-  .contact .right form .fields {
-    flex-direction: column;
-  }
-  .contact .right form .name,
-  .contact .right form .email {
-    margin: 0;
-  }
-  .right form .error-box {
-    width: 150px;
-  }
-  .scroll-up-btn {
-    right: 15px;
-    bottom: 15px;
-    height: 38px;
-    width: 35px;
-    font-size: 23px;
-    line-height: 38px;
-  }
 }
