@@ -27,8 +27,35 @@ function checkWin() {
     ) {
       document.querySelector(".pyro").style.display = "block";
       winAudio.play();
-      document.getElementsByClassName("message")[0].innerHTML =
-        "Player " + box[e[0]].innerHTML + " Won..!";
+      let winner = box[e[0]].innerHTML;
+      Swal.fire({
+        title: "Congratulations!",
+        text: "Player " + winner + " Won!",
+        imageUrl: "./cartoon-celebration.webp",
+        imageWidth: 300,
+        imageHeight: 200,
+        customClass: {
+          title: "custom-swal-title",
+        },
+        confirmButtonText: "Play Again",
+        confirmButtonColor: "#ff4500",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `,
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `,
+        },
+      }).then(() => {
+        reset();
+      });
       win = true;
       setTimeout(() => {
         document.querySelector(".pyro").style.display = "none";
@@ -36,6 +63,37 @@ function checkWin() {
       }, 4000);
     }
   });
+
+  if (!win && boxClickArray.length === 9) {
+    Swal.fire({
+      title: "Game Over!",
+      text: "It's a tie! Please try a new game.",
+      customClass: {
+        title: "custom-swal-title",
+      },
+      imageUrl: "./sorry.gif",
+      imageWidth: 200,
+      imageHeight: 300,
+      confirmButtonText: "New Game",
+      confirmButtonColor: "#ff4500",
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `,
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `,
+      },
+    }).then(() => {
+      reset();
+    });
+  }
 }
 
 function reset() {
@@ -77,6 +135,32 @@ function boxClick(num) {
       }
     }
   } else {
-    alert("Already checked that box..!");
+    Swal.fire({
+      imageUrl: "./not-allowed.png",
+      imageWidth: 200,
+      imageHeight: 200,
+      height: 600,
+      title: "Oops!",
+      customClass: {
+        title: "custom-swal-title",
+      },
+      text: "That box is already checked out.",
+      confirmButtonText: "Got it!",
+      confirmButtonColor: "#ff4500",
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `,
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `,
+      },
+    });
   }
 }
