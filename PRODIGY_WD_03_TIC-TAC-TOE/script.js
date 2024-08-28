@@ -29,8 +29,11 @@ function checkWin() {
       winAudio.play();
       let winner = box[e[0]].innerHTML;
       Swal.fire({
-        title: "Congratulations!",
-        text: "Player " + winner + " Won!",
+        title:
+          winner === "X"
+            ? "Hoorayyy! X Marks the Spot"
+            : "Yippeee! O Takes the Crown",
+        text: `Player ${winner} has won the game`,
         imageUrl: "./cartoon-celebration.webp",
         imageWidth: 300,
         imageHeight: 200,
@@ -73,7 +76,7 @@ function checkWin() {
       },
       imageUrl: "./sorry.gif",
       imageWidth: 200,
-      imageHeight: 300,
+      imageHeight: 200,
       confirmButtonText: "New Game",
       confirmButtonColor: "#ff4500",
       showClass: {
